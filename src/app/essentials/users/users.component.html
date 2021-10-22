@@ -1,0 +1,22 @@
+<section>
+  <div *ngIf="users?.length > 0; else elseBlock">
+    <table class="table table-bordered">
+      <tr class="bg-primary">
+        <th>Id</th>
+        <th>Name</th>
+        <th>UserName</th>
+        <th>Email</th>
+      </tr>
+      <tr *ngFor="let user of users">
+          <td> <a [routerLink]="['user', user.id]"> {{user.id}}</a></td>
+          <td>{{user.name}}</td>
+          <td>{{user.username}}</td>
+          <td>{{user.email}}</td>
+      </tr>
+   </table>
+  </div>
+   <ng-template #elseBlock>
+     <p class="alert alert-danger">{{errorMsg}}</p>
+   </ng-template>
+</section>
+

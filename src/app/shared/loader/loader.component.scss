@@ -1,0 +1,36 @@
+.box{
+  color: rgb(6, 240, 220); //#d60b52;
+  background-color: #fff;
+  font-size: 0;
+  padding: 0;
+  border-width: 3px;
+  line-height: 200px;
+  z-index: 2;
+}
+
+.loader-03 {
+  font-size: 70px;
+  line-height: 200px;
+  display: inline-block;
+	width: 1.4em;
+	height: 1.4em;
+	color: inherit;
+	vertical-align: middle;
+	pointer-events: none;
+	border: .17em solid currentcolor;
+	border-bottom-color: transparent;
+	border-radius: 50%;
+	animation: 1s loader-03 linear infinite;
+	position: relative;
+}
+
+@keyframes loader-03 {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+

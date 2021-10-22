@@ -1,0 +1,9 @@
+<ul class="list-group">
+  <ng-content select=".header"></ng-content>
+  <li class="list-group-item d-flex justify-content-between align-items-center"
+  *ngFor="let product of products">
+    {{product.name}}
+    <span class="badge bg-primary badge-pill">{{product.price}}</span>
+  </li>
+  <ng-content class=".link"></ng-content>
+  </ul>

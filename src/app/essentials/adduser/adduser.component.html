@@ -1,0 +1,42 @@
+
+<form [formGroup]="profileForm">
+  <div  class="row justify-content-center">
+    <div *ngIf="formStatus" class="alert alert-success p-2 position-fixed w-50 m-3" role="alert">
+        Form has been submitted successfully!
+    </div>
+
+    <div class="col-md-8 card shadow px-3 py-3">
+        <div class="row">
+          <h2 class="col">Add User</h2>
+        </div>
+        <hr>
+        <div class="form-group">
+          <label for=""> Enter Name</label>
+          <input type="text" class="form-control" formControlName="name" required>
+          <small  class="text-danger" *ngIf="!profileForm.get('name')?.valid && profileForm.get('name')?.touched">
+            Enter Profile Name
+          </small>
+        </div>
+        <div class="form-group">
+          <label for="">Enter Email </label>
+          <input  type="email" class="form-control" formControlName="email" required>
+          <small class="text-danger" *ngIf="!profileForm.get('email')?.valid && profileForm.get('email')?.touched">
+            Enter valid email
+          </small>
+        </div>
+
+        <div class="form-group">
+          <label for="">Enter Password </label>
+          <input  type="password" class="form-control" formControlName="password" required />
+          <small class="text-danger" *ngIf="!profileForm.get('password')?.valid && profileForm.get('password')?.touched">
+            Enter valid Passowrd
+          </small>
+        </div>
+
+        <div class="btn-row mt-3">
+          <button class="btn btn-primary mr-3"
+          (click)="onaddUserSubmit()">Save profile</button>
+        </div>
+    </div>
+  </div>
+</form>

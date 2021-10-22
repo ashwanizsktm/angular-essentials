@@ -1,0 +1,35 @@
+<div class="row container-fluid m-4">
+  <div class="col-md-3">
+    <p> my Fav: <strong>  {{favCat | async}} </strong></p>
+      <div *ngFor="let cat of cats" class="cards">
+        <img src="{{cat.imgSrc}}" alt="cat" width="70" height="70">
+         <p>{{cat.name}}</p>
+      </div>
+  </div>
+  <div class="col-md-3">
+    <p>Dog Array lenght {{ doglenght | async}}</p>
+    <div *ngFor="let dog of dogs | async" class="cards">
+      <img src="{{dog.imgSrc}}" alt="cat" width="70" height="70">
+       <p>{{dog.name}}</p>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <h6>All the user with name</h6>
+    <h6>the richest amongst all:<strong>{{userone}}</strong></h6>
+    <table>
+      <tr>
+        <th>S.No.</th>
+        <th>Name</th>
+      </tr>
+      <tr *ngFor="let user of users">
+        <td>{{user.id}}</td>
+        <td>{{user.name}}</td>
+      </tr>
+    </table>
+  </div>
+</div>
+<div>
+</div>
+<button routerLink="/asynchronous/rxjsa" class="btn-sm btn btn-dark">rxjs-A</button>
+<button routerLink="/asynchronous/rxjsb" class="btn-sm btn btn-dark m-3"> rxjs-B</button>
+

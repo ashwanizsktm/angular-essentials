@@ -1,0 +1,72 @@
+{
+  "catsData": [
+    {
+      "id": "1",
+      "name": "fluffy",
+      "imgSrc":"../../assets/images/cat-1.jpg",
+      "owner": "Peter",
+      "price": "2000"
+    },
+
+    {
+      "id": "2",
+      "name": "jings",
+      "imgSrc":"../../assets/images/cat-2.jpg",
+      "owner": "Peter",
+      "price": "3000"
+    },
+
+    {
+      "id": "3",
+      "name": "opai",
+      "imgSrc":"../../assets/images/cat-3.jpg",
+      "owner": "Alax",
+       "price": "4000"
+    }
+  ],
+
+  "dogsData":[
+   {
+    "id": "1",
+    "name":"Fido",
+    "imgSrc":"https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2020/02/322868_1100-800x825.jpg",
+    "owner": "Alax"
+  },
+
+    {
+      "id": "2",
+      "name":"rex",
+      "owner": "Peter",
+      "imgSrc":"https://www.cdc.gov/healthypets/images/pets/angry-dog.jpg?_=03873"
+    },
+    {
+      "id": "3",
+       "owner": "jeff",
+      "name":"Fido",
+      "imgSrc":"https://kb.rspca.org.au/wp-content/uploads/2018/11/golder-retriever-puppy.jpeg"
+    }
+  ],
+
+  "humans":[
+    {
+      "id":"1",
+      "name":"Alax"
+    },
+    {
+      "id":"2",
+      "name":"peter"
+    },
+    {
+      "id":"3",
+      "name":"Max"
+    },
+    {
+      "id":"4",
+      "name":"Jone"
+    },
+    {
+      "id":"5",
+      "name":"Jeff"
+    }
+  ]
+}

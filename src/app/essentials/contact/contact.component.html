@@ -1,0 +1,27 @@
+<section>
+
+  <div class="form-group mt-3">
+    <label for="">Enter the ranks to see student details</label> <br>
+    <input type="text" placeholder="Enter ranking here!" #inputVal required/>
+    <button class="btn btn-outline-dark btn-sm m-3"
+     (click)="getStudentInfo(inputVal.value)">  Student Info. </button>
+     <div *ngIf="isRankAvailabel">
+       <h4  >The rank: <strong>{{inputVal.value}}</strong></h4>
+         <h4>candidate name is: <strong>{{rankingData.name}}</strong></h4>
+        <h4>Marks: <strong>{{rankingData.marks}}</strong></h4>
+     </div>
+  </div>
+
+ <hr class="mt-5">
+  <h1>Contact Component</h1>
+  <p #para>Please feel free to contact me! </p>
+  <p #para>Email: ashwanizskt@gmail.com </p>
+  <div>
+    <h2>Counter {{child?.counter}}</h2>
+    <button class="btn btn-outline-info btn-sm" (click)="inc()">increment</button>
+    <button class="btn btn-outline-info btn-sm m-4" (click)="dec()">decrement</button>
+
+  </div>
+  <app-counter #childview></app-counter>
+</section>
+

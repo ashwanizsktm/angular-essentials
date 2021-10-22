@@ -1,0 +1,61 @@
+<section>
+  <!-- <h2 class="text-center">{{buildinPipe | titlecase}}</h2> -->
+  <!-- <table class="table table-bordered">
+     <tr class="bg-primary">
+       <th>Id</th>
+       <th>Name</th>
+       <th>City</th>
+       <th>Salary</th>
+       <th>DOB</th>
+       <th>Age</th>
+     </tr>
+     <tr *ngFor="let user of users">
+         <td>{{user.id}}</td>
+         <td>{{user.name | uppercase}}</td>
+         <td>{{user.city | lowercase}}</td>
+         <td>{{user.salary | currency: 'INR':'symbol':'2.2'}}</td>
+         <td>{{user.dob | date: 'dd/MM/yyyy'}}</td>
+         <td>{{user.dob | age}}</td>
+     </tr>
+  </table> -->
+
+  <!-- json pipe we basically use for debugging n see the keys of an object -->
+     <!-- {{users | json}} -->
+
+  <!-- real data using http calls -->
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+    <a class="navbar-brand" href="#">
+      <img src="https://www.pngall.com/wp-content/uploads/5/User-Profile-PNG-High-Quality-Image.png"
+    alt="user-profile" width="40" height="40">
+      User Management</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse"
+     data-target="#navbarNav" aria-controls="navbarNav"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item ">
+          <a class="nav-link" routerLink="users" routerLinkActive="active">Users</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['about', {
+            outlets:{
+              'maps':['location'],
+              'feeds':['feedback']
+            }
+          }]" routerLinkActive="active">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="adduser" routerLinkActive="active">Add user</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="contact" routerLinkActive="active">Contact</a>
+        </li>
+      </ul>
+     </div>
+     </nav>
+</section>
+<router-outlet></router-outlet>
