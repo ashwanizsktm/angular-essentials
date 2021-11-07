@@ -24,6 +24,8 @@ import { HighlightDirective } from './directive/highlight.directive';
     AgePipe,
     RedBlackDirective,
     HighlightDirective,
+    FormsModule,
+    ReactiveFormsModule
     // LoaderComponent
   ]
 })

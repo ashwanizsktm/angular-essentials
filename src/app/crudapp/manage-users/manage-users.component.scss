@@ -9,3 +9,8 @@
   outline: none;
   cursor: pointer;
 }
+
+input.ng-touched.ng-invalid{
+  border: 1px solid red;
+  box-shadow: 0 0 22px #ff000030 inset;
+}

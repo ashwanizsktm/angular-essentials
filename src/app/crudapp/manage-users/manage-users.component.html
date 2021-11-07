@@ -1,0 +1,63 @@
+<section class="page-area bg-light">
+  <div class="header d-flex justify-content-around pt-2">
+    <h2 class="text-center">Manage Users</h2>
+    <button routerLink="/crudapp" class="back-btn">Back</button>
+  </div>
+
+ <br>
+ <div class="container border-top pt-5">
+   <div class="row">
+     <div class="col-md-6">
+       <h2>Add Users</h2>
+
+      <form #userForm="ngForm" (ngSubmit)="onAddUser(userForm.value)">
+
+        <div class="form-group">
+           <label for="id">User Name</label>
+           <input type="text" class="form-control" id="id" name="name" ngModel required>
+        </div>
+
+        <div class="form-group">
+          <label for="technology">Technology use</label>
+          <input type="text" class="form-control" id="technology" name="technology" ngModel required>
+        </div>
+
+        <button type="submit" class="btn btn-primary">
+             {{editMode? 'Update User': 'Add User'}}
+        </button>
+        <button type="button" class="btn btn-warning m-3" (click)="onFetchUser()">Fetch User </button>
+
+      </form>
+
+     </div>
+     <div class="col-md-6 pt-4">
+       <h2>User Data</h2>
+       <!-- <h2>data title with aync pipe</h2> -->
+       <table class="table">
+         <thead class="thead-dark">
+           <tr class="thead-dark">
+             <th scope="col">Name</th>
+             <th scope="col">Technology</th>
+             <th scope="col">Edit</th>
+             <th scope="col">Delete</th>
+           </tr>
+          </thead>
+
+            <tr *ngFor="let user of users; index as i">
+              <td>{{user.name}}</td>
+              <td>{{user.technology}}</td>
+              <td (click)="onEditUser(user.userId, i)">
+                <a class="text-danger" style="cursor: pointer;">
+                  <i class="fa fa-edit"></i>
+                </a></td>
+              <td (click)="onDeleteUser(user.userId)">
+                <a class="text-danger" style="cursor: pointer;">
+                  <i class="fa fa-trash"></i>
+                </a></td>
+             </tr>
+       </table>
+     </div>
+   </div>
+ </div>
+</section>
+
