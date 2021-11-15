@@ -1,0 +1,30 @@
+.back-btn{
+  position: absolute;
+  right: 10px;
+  bottom: 40px;
+  background-color: #000;
+  color:#fff;
+  padding: 3px 15px;
+  border: none;
+  height: 29px;
+  line-height: 23px;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+}
+
+nav ul{
+  list-style: none;
+}
+
+li{
+  display: inline-block;
+   padding: 0 10px;
+  a{
+    text-decoration: none;
+    padding: 9px 12px;
+    background-color: lightgreen;
+    color: #000;
+  }
+}
+

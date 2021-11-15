@@ -26,6 +26,11 @@ const routes: Routes = [
      loadChildren: () => import('./crudapp/crudapp.module').then(m => m.CrudappModule)
   },
 
+  {
+    path: 'routing-concepts',
+     loadChildren: () => import('./routingconcept/routingconcept.module').then(m => m.RoutingconceptModule)
+  },
+
   {path: '**', component: HomeComponent}
 ];
 

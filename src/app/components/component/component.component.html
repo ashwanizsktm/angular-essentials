@@ -22,9 +22,7 @@
   <div class="wrapper my-2">
     <h3>Parent child communction</h3>
      <h3>message from child: {{receivedMsg}}</h3>
-    <app-comp5
-     [inputData]="message"
-     (messageEvent)="receiveDataFromChild($event)">
+    <app-comp5 [inputData]="message" (messageEvent)="receiveDataFromChild($event)">
     </app-comp5>
   </div>
 
