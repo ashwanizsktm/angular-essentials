@@ -6,41 +6,41 @@ import { ActivatedRoute } from '@angular/router';
 
 
 @Injectable({
-  providedIn: 'root'
+	providedIn: 'root'
 })
 export class UserService {
 
-  errMsg = "Error while calling API";
+	errMsg = "Error while calling API";
 
-  constructor(private http: HttpClient,
-   private route: ActivatedRoute) { }
+	constructor(private http: HttpClient,
+		private route: ActivatedRoute) { }
 
-   idx: any;
+	idx: any;
 
-  getId(id: number){
-  return this.idx = id;
-  }
+	getId(id: number) {
+		return this.idx = id;
+	}
 
-  // getAllusers(){
-  //   return this.http.get('https://jsonplaceholder.typicode.com/users').pipe(
-  //     catchError((err) => {
-  //      return this.errMsg = err;
-  //     })
-  //   )
-  // }
-  // this way we can handle error in service
-  //  but this is not a good practice so refer error httpinterceptor
-  // where error is getting handled globaly.
+	// getAllusers(){
+	//   return this.http.get('https://jsonplaceholder.typicode.com/users').pipe(
+	//     catchError((err) => {
+	//      return this.errMsg = err;
+	//     })
+	//   )
+	// }
+	// this way we can handle error in service
+	//  but this is not a good practice so refer error httpinterceptor
+	// where error is getting handled globaly.
 
-  // id = this.route.snapshot.params['id'];
+	// id = this.route.snapshot.params['id'];
 
- getAllusers(){
-   return this.http.get('https://jsonplaceholder.typicode.com/users')
- }
+	getAllusers() {
+		return this.http.get('https://jsonplaceholder.typicode.com/users')
+	}
 
-  getUser(id: any) {
-    return this.http.get(`https://jsonplaceholder.typicode.com/users/${id}`);
-  }
+	getUser(id: any) {
+		return this.http.get(`https://jsonplaceholder.typicode.com/users/${id}`);
+	}
 }
 
 

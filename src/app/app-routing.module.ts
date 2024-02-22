@@ -31,6 +31,11 @@ const routes: Routes = [
      loadChildren: () => import('./routingconcept/routingconcept.module').then(m => m.RoutingconceptModule)
   },
 
+  {
+    path: 'dependency',
+    loadChildren: () => import('./dependency/dependency.module').then(m => m.DependencyModule)
+  },
+
   {path: '**', component: HomeComponent}
 ];
 

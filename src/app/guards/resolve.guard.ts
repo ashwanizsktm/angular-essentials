@@ -5,8 +5,9 @@ import { forkJoin, Observable } from 'rxjs';
 
 
 @Injectable({
-  providedIn: 'root'
+   providedIn: 'root'
 })
+
 export class ResolveGuard implements Resolve<any> {
   constructor(private user: UserService,
     private route: ActivatedRoute){}

@@ -9,6 +9,7 @@ import { catchError, retry } from 'rxjs/operators';
 })
 export class DataService{
   API_URL = 'http://localhost:3000/';
+  
   constructor(private http: HttpClient){}
 
   getDogs():Observable<any> {

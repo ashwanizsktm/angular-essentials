@@ -3,16 +3,15 @@ import { ActivatedRouteSnapshot, CanActivateChild, RouterStateSnapshot, UrlTree 
 import { AuthService } from '../services/auth.service';
 
 @Injectable({
-  providedIn: 'root'
+	providedIn: 'root'
 })
 export class AdminGuard implements CanActivateChild {
-  constructor(private auth: AuthService){}
-     canActivateChild() {
-      if(this.auth.isAdminRole){
-        return true;
-      } else{
-        return false;
-      }
-     }
-  }
-
+	constructor(private auth: AuthService) { }
+	canActivateChild() {
+		if (this.auth.isAdminRole) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+}

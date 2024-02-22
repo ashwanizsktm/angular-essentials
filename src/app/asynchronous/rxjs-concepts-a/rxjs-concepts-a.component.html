@@ -1,0 +1,35 @@
+<!-- <div *ngFor="let user of users$ | async">
+    {{user.name}}
+</div> -->
+
+<!-- <div *ngFor="let user of userName$ | async">
+    {{user}}
+</div> -->
+
+<!-- <div *ngFor="let user of filteredUser$ | async">
+    {{user.name}}
+</div> -->
+
+<!-- combine latest -->
+
+<div *ngIf="data$ | async as data">
+    <div *ngFor="let user of data.users">
+        {{user.name}}
+    </div>
+    =======
+    <div *ngFor="let user of data.userName">
+        {{user}}
+    </div>
+    ========= 
+    <div *ngFor="let user of data.filteredUser">
+        {{user.name}}
+    </div>
+    
+    <div *ngIf="user$ | async as user">
+       {{user.id}} => {{user.name}}
+    </div>
+</div>
+
+
+<button routerLink="/asynchronous/rxjsa" class="btn-sm btn btn-dark">rxjs-A</button>
+<button routerLink="/asynchronous/rxjsb" class="btn-sm btn btn-dark m-3"> rxjs-B</button>

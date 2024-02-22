@@ -2,8 +2,6 @@ import { Component, ElementRef, NgZone, OnDestroy, OnInit, ViewChild } from '@an
 import { Observable, Subscriber, Subscription, Subject } from 'rxjs';
 import {  filter } from 'rxjs/operators';
 import { UtilityService } from './services/utility.service';
-import { ajax } from 'rxjs/ajax';
-
 
 @Component({
   selector: 'app-root',
@@ -18,5 +16,8 @@ export class AppComponent implements OnInit{
   constructor() {}
 
    ngOnInit() {}
+
+
+ 
 
 }
